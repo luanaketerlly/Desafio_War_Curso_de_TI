@@ -8,6 +8,9 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <time.h>
+
 
  //Declarando as variáveis
     #define TAM 5 
@@ -19,13 +22,14 @@
          int tropas;
     };
 
+    territorio *p = (territorio*) calloc (sizeof(territorio));
+
+  //Função para limpar buffer de entrada (Scanf)
     void limparBufferentrada ( ) {
         int c;
         while (( c= getchar()) != '\n' && c != EOF);
     }
-    void limparBufferEntrada() {
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);}
+   
 
     int main () {
 
